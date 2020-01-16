@@ -1,0 +1,2132 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     88306,       2124]
+NotebookOptionsPosition[     87466,       2091]
+NotebookOutlinePosition[     87843,       2107]
+CellTagsIndexPosition[     87800,       2104]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"StreamPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "x1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "x2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "x3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "x4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}]}], ")"}], "^", "1.5"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "y1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "y2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "y3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "y4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}]}], ")"}], "^", "1.5"}]}]}]}], "}"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x2", "\[Rule]", 
+         RowBox[{"x1", "-", "rx2"}]}], ",", 
+        RowBox[{"y2", "\[Rule]", 
+         RowBox[{"y1", "-", "ry2"}]}], ",", 
+        RowBox[{"x3", "\[Rule]", 
+         RowBox[{"x1", "-", "rx3"}]}], ",", 
+        RowBox[{"y3", "\[Rule]", 
+         RowBox[{"y1", "-", "ry3"}]}], ",", 
+        RowBox[{"x4", "\[Rule]", 
+         RowBox[{"x1", "-", "rx4"}]}], ",", 
+        RowBox[{"y4", "\[Rule]", 
+         RowBox[{"y1", "-", "ry4"}]}]}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"StreamColorFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{"Hue", "[", 
+        RowBox[{
+         RowBox[{"Log", "[", "#5", "]"}], "/", "5"}], "]"}], "]"}]}], ",", 
+     " ", 
+     RowBox[{"StreamColorFunctionScaling", "\[Rule]", "True"}], ",", 
+     RowBox[{"StreamScale", "\[Rule]", "ss"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"BarLegend", "[", 
+       RowBox[{"{", 
+        RowBox[{"Hue", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}], "]"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"PointSize", "[", "0.01", "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q1", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Red"}], "]"}], ",", 
+          RowBox[{"q1", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Green"}], "]"}], 
+          ",", 
+          RowBox[{"q1", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Transparent"}], 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q1", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q1", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q1\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"-", "0.5"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q2", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Red"}], "]"}], 
+          ",", 
+          RowBox[{"q2", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Green"}], 
+           "]"}], ",", 
+          RowBox[{"q2", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Transparent"}],
+            "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q2", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q2", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q2\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"rx2", ",", 
+              RowBox[{"ry2", "-", "0.5"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q3", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx3", ",", "ry3"}], "}"}], "]"}], ",", "Red"}], "]"}], 
+          ",", 
+          RowBox[{"q3", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx3", ",", "ry3"}], "}"}], "]"}], ",", "Green"}], 
+           "]"}], ",", 
+          RowBox[{"q3", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx3", ",", "ry3"}], "}"}], "]"}], ",", "Transparent"}],
+            "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q3", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q3", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q3\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"rx3", ",", 
+              RowBox[{"ry3", "+", "0.5"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q4", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx4", ",", "ry4"}], "}"}], "]"}], ",", "Red"}], "]"}], 
+          ",", 
+          RowBox[{"q4", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx4", ",", "ry4"}], "}"}], "]"}], ",", "Green"}], 
+           "]"}], ",", 
+          RowBox[{"q4", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx4", ",", "ry4"}], "}"}], "]"}], ",", "Transparent"}],
+            "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q4", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q4", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q4\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"rx4", ",", 
+              RowBox[{"ry4", "+", "0.5"}]}], "}"}]}], "]"}]}], "]"}]}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx2", ",", "1", ",", "\"\<Charge 2 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry2", ",", "0", ",", "\"\<Charge 2 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx3", ",", "1", ",", "\"\<Charge 3 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry3", ",", "1", ",", "\"\<Charge 3 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx4", ",", "0", ",", "\"\<Charge 4 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry4", ",", "1", ",", "\"\<Charge 4 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q1", ",", "1", ",", "\"\<Charge 1\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q2", ",", "0", ",", "\"\<Charge 2\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q3", ",", "0", ",", "\"\<Charge 3\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q4", ",", "0", ",", "\"\<Charge 4\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ss", ",", "0.01", ",", "\"\<Stream Arrow Fineness\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.01", ",", "0.025", ",", "0.05", ",", "0.1", ",", "0.5"}], 
+      "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.731229152307951*^9, 3.7312291684502788`*^9}},
+ ExpressionUUID -> "899991d3-e63e-4b25-b513-ff866805b2e8"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`q1$$ = 
+    1, $CellContext`q2$$ = -1, $CellContext`q3$$ = -1, $CellContext`q4$$ = 
+    0, $CellContext`rx2$$ = 1, $CellContext`rx3$$ = 1, $CellContext`rx4$$ = 
+    0, $CellContext`ry2$$ = 0, $CellContext`ry3$$ = 0, $CellContext`ry4$$ = 
+    1, $CellContext`ss$$ = 0.05, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rx2$$], 1, "Charge 2 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry2$$], 0, "Charge 2 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rx3$$], 1, "Charge 3 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry3$$], 1, "Charge 3 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rx4$$], 0, "Charge 4 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry4$$], 1, "Charge 4 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`q1$$], 1, "Charge 1"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q2$$], 0, "Charge 2"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q3$$], 0, "Charge 3"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q4$$], 0, "Charge 4"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`ss$$], 0.01, "Stream Arrow Fineness"}, {0.01, 0.025, 
+      0.05, 0.1, 0.5}}}, Typeset`size$$ = {505., {227.5, 232.5}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`rx2$7662$$ = 0, $CellContext`ry2$7663$$ = 
+    0, $CellContext`rx3$7664$$ = 0, $CellContext`ry3$7665$$ = 
+    0, $CellContext`rx4$7666$$ = 0, $CellContext`ry4$7667$$ = 
+    0, $CellContext`q1$7668$$ = 0, $CellContext`q2$7669$$ = 
+    0, $CellContext`q3$7670$$ = 0, $CellContext`q4$7671$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`q1$$ = 1, $CellContext`q2$$ = 
+        0, $CellContext`q3$$ = 0, $CellContext`q4$$ = 0, $CellContext`rx2$$ = 
+        1, $CellContext`rx3$$ = 1, $CellContext`rx4$$ = 0, $CellContext`ry2$$ = 
+        0, $CellContext`ry3$$ = 1, $CellContext`ry4$$ = 1, $CellContext`ss$$ = 
+        0.01}, "ControllerVariables" :> {
+        Hold[$CellContext`rx2$$, $CellContext`rx2$7662$$, 0], 
+        Hold[$CellContext`ry2$$, $CellContext`ry2$7663$$, 0], 
+        Hold[$CellContext`rx3$$, $CellContext`rx3$7664$$, 0], 
+        Hold[$CellContext`ry3$$, $CellContext`ry3$7665$$, 0], 
+        Hold[$CellContext`rx4$$, $CellContext`rx4$7666$$, 0], 
+        Hold[$CellContext`ry4$$, $CellContext`ry4$7667$$, 0], 
+        Hold[$CellContext`q1$$, $CellContext`q1$7668$$, 0], 
+        Hold[$CellContext`q2$$, $CellContext`q2$7669$$, 0], 
+        Hold[$CellContext`q3$$, $CellContext`q3$7670$$, 0], 
+        Hold[$CellContext`q4$$, $CellContext`q4$7671$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> StreamPlot[
+        ReplaceAll[{($CellContext`q1$$ $CellContext`x1)/($CellContext`x1^2 + \
+$CellContext`y1^2)^1.5 + ($CellContext`q2$$ \
+$CellContext`x2)/($CellContext`x2^2 + $CellContext`y2^2)^1.5 + \
+($CellContext`q3$$ $CellContext`x3)/($CellContext`x3^2 + \
+$CellContext`y3^2)^1.5 + ($CellContext`q4$$ \
+$CellContext`x4)/($CellContext`x4^2 + $CellContext`y4^2)^1.5, \
+($CellContext`q1$$ $CellContext`y1)/($CellContext`x1^2 + \
+$CellContext`y1^2)^1.5 + ($CellContext`q2$$ \
+$CellContext`y2)/($CellContext`x2^2 + $CellContext`y2^2)^1.5 + \
+($CellContext`q3$$ $CellContext`y3)/($CellContext`x3^2 + \
+$CellContext`y3^2)^1.5 + ($CellContext`q4$$ \
+$CellContext`y4)/($CellContext`x4^2 + $CellContext`y4^2)^1.5}, \
+{$CellContext`x2 -> $CellContext`x1 - $CellContext`rx2$$, $CellContext`y2 -> \
+$CellContext`y1 - $CellContext`ry2$$, $CellContext`x3 -> $CellContext`x1 - \
+$CellContext`rx3$$, $CellContext`y3 -> $CellContext`y1 - $CellContext`ry3$$, \
+$CellContext`x4 -> $CellContext`x1 - $CellContext`rx4$$, $CellContext`y4 -> \
+$CellContext`y1 - $CellContext`ry4$$}], {$CellContext`x1, -10, 
+         10}, {$CellContext`y1, -10, 10}, 
+        StreamColorFunction -> (Hue[Log[#5]/5]& ), StreamColorFunctionScaling -> 
+        True, StreamScale -> $CellContext`ss$$, PlotLegends -> 
+        BarLegend[{Hue, {0, 1}}], ImageSize -> 500, Epilog -> {
+          PointSize[0.01], 
+          Which[$CellContext`q1$$ == -1, 
+           Style[
+            Point[{0, 0}], Red], $CellContext`q1$$ == 1, 
+           Style[
+            Point[{0, 0}], Green], $CellContext`q1$$ == 0, 
+           Style[
+            Point[{0, 0}], Transparent]], 
+          If[
+           Or[$CellContext`q1$$ == 1, $CellContext`q1$$ == -1], 
+           Text[
+            Style["q1", Medium], {0, -0.5}]], 
+          Which[$CellContext`q2$$ == -1, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], 
+            Red], $CellContext`q2$$ == 1, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], 
+            Green], $CellContext`q2$$ == 0, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], Transparent]], 
+          If[
+           Or[$CellContext`q2$$ == 1, $CellContext`q2$$ == -1], 
+           Text[
+            Style[
+            "q2", Medium], {$CellContext`rx2$$, $CellContext`ry2$$ - 0.5}]], 
+          Which[$CellContext`q3$$ == -1, 
+           Style[
+            Point[{$CellContext`rx3$$, $CellContext`ry3$$}], 
+            Red], $CellContext`q3$$ == 1, 
+           Style[
+            Point[{$CellContext`rx3$$, $CellContext`ry3$$}], 
+            Green], $CellContext`q3$$ == 0, 
+           Style[
+            Point[{$CellContext`rx3$$, $CellContext`ry3$$}], Transparent]], 
+          If[
+           Or[$CellContext`q3$$ == 1, $CellContext`q3$$ == -1], 
+           Text[
+            Style[
+            "q3", Medium], {$CellContext`rx3$$, $CellContext`ry3$$ + 0.5}]], 
+          Which[$CellContext`q4$$ == -1, 
+           Style[
+            Point[{$CellContext`rx4$$, $CellContext`ry4$$}], 
+            Red], $CellContext`q4$$ == 1, 
+           Style[
+            Point[{$CellContext`rx4$$, $CellContext`ry4$$}], 
+            Green], $CellContext`q4$$ == 0, 
+           Style[
+            Point[{$CellContext`rx4$$, $CellContext`ry4$$}], Transparent]], 
+          If[
+           Or[$CellContext`q4$$ == 1, $CellContext`q4$$ == -1], 
+           Text[
+            Style[
+            "q4", Medium], {$CellContext`rx4$$, $CellContext`ry4$$ + 0.5}]]}],
+       "Specifications" :> {{{$CellContext`rx2$$, 1, "Charge 2 x position"}, 
+         0, 5, 1}, {{$CellContext`ry2$$, 0, "Charge 2 y position"}, 0, 5, 
+         1}, {{$CellContext`rx3$$, 1, "Charge 3 x position"}, 0, 5, 
+         1}, {{$CellContext`ry3$$, 1, "Charge 3 y position"}, 0, 5, 
+         1}, {{$CellContext`rx4$$, 0, "Charge 4 x position"}, 0, 5, 
+         1}, {{$CellContext`ry4$$, 1, "Charge 4 y position"}, 0, 5, 
+         1}, {{$CellContext`q1$$, 1, "Charge 1"}, {-1, 0, 
+         1}}, {{$CellContext`q2$$, 0, "Charge 2"}, {-1, 0, 
+         1}}, {{$CellContext`q3$$, 0, "Charge 3"}, {-1, 0, 
+         1}}, {{$CellContext`q4$$, 0, "Charge 4"}, {-1, 0, 
+         1}}, {{$CellContext`ss$$, 0.01, "Stream Arrow Fineness"}, {0.01, 
+         0.025, 0.05, 0.1, 0.5}}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{850., {256., 262.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7311603787973623`*^9, 3.7312291798421383`*^9},
+ ExpressionUUID -> "0efa77e7-7ba4-4eab-a603-2b87cc967e80"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"StreamPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "x1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "x2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}]}], ")"}], "^", "1.5"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "y1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "y2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}]}], ")"}], "^", "1.5"}]}]}]}], "}"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x2", "\[Rule]", 
+         RowBox[{"x1", "-", "rx2"}]}], ",", 
+        RowBox[{"y2", "\[Rule]", 
+         RowBox[{"y1", "-", "ry2"}]}]}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"StreamScale", "\[Rule]", "ss"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"BarLegend", "[", 
+       RowBox[{"{", 
+        RowBox[{"Hue", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}], "]"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"PointSize", "[", "0.01", "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q1", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Red"}], "]"}], ",", 
+          RowBox[{"q1", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Green"}], "]"}], 
+          ",", 
+          RowBox[{"q1", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Transparent"}], 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q1", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q1", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q1\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"-", "0.5"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q2", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Red"}], "]"}], 
+          ",", 
+          RowBox[{"q2", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Green"}], 
+           "]"}], ",", 
+          RowBox[{"q2", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Transparent"}],
+            "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q2", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q2", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q2\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"rx2", ",", 
+              RowBox[{"ry2", "-", "0.5"}]}], "}"}]}], "]"}]}], "]"}]}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx2", ",", "1", ",", "\"\<Charge 2 x position\>\""}], "}"}], 
+     ",", "0", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry2", ",", "0", ",", "\"\<Charge 2 y position\>\""}], "}"}], 
+     ",", "0", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q1", ",", "1", ",", "\"\<Charge 1\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q2", ",", 
+       RowBox[{"-", "1"}], ",", "\"\<Charge 2\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ss", ",", "0.025", ",", "\"\<Stream Arrow Fineness\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.01", ",", "0.025", ",", "0.05", ",", "0.1", ",", "0.5"}], 
+      "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7312535846574016`*^9, 3.7312536730496364`*^9}, 
+   3.7312538285514693`*^9, {3.7312538650225286`*^9, 3.731253884342946*^9}, {
+   3.731253917103129*^9, 3.731253971212145*^9}, {3.7312540022336864`*^9, 
+   3.7312541054213142`*^9}, {3.7312541666270065`*^9, 3.7312541856095257`*^9}, 
+   3.731254253121193*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`q1$$ = 
+    1, $CellContext`q2$$ = -1, $CellContext`rx2$$ = 5., $CellContext`ry2$$ = 
+    0, $CellContext`ss$$ = 0.5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rx2$$], 1, "Charge 2 x position"}, 0, 5}, {{
+       Hold[$CellContext`ry2$$], 0, "Charge 2 y position"}, 0, 5}, {{
+       Hold[$CellContext`q1$$], 1, "Charge 1"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q2$$], -1, "Charge 2"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`ss$$], 0.025, "Stream Arrow Fineness"}, {0.01, 0.025,
+       0.05, 0.1, 0.5}}}, Typeset`size$$ = {505., {227.5, 232.5}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`rx2$87965$$ = 0, $CellContext`ry2$87966$$ = 
+    0, $CellContext`q1$87967$$ = 0, $CellContext`q2$87968$$ = 
+    0, $CellContext`ss$87969$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`q1$$ = 
+        1, $CellContext`q2$$ = -1, $CellContext`rx2$$ = 1, $CellContext`ry2$$ = 
+        0, $CellContext`ss$$ = 0.025}, "ControllerVariables" :> {
+        Hold[$CellContext`rx2$$, $CellContext`rx2$87965$$, 0], 
+        Hold[$CellContext`ry2$$, $CellContext`ry2$87966$$, 0], 
+        Hold[$CellContext`q1$$, $CellContext`q1$87967$$, 0], 
+        Hold[$CellContext`q2$$, $CellContext`q2$87968$$, 0], 
+        Hold[$CellContext`ss$$, $CellContext`ss$87969$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> StreamPlot[
+        ReplaceAll[{($CellContext`q1$$ $CellContext`x1)/($CellContext`x1^2 + \
+$CellContext`y1^2)^1.5 + ($CellContext`q2$$ \
+$CellContext`x2)/($CellContext`x2^2 + $CellContext`y2^2)^1.5, \
+($CellContext`q1$$ $CellContext`y1)/($CellContext`x1^2 + \
+$CellContext`y1^2)^1.5 + ($CellContext`q2$$ \
+$CellContext`y2)/($CellContext`x2^2 + $CellContext`y2^2)^1.5}, \
+{$CellContext`x2 -> $CellContext`x1 - $CellContext`rx2$$, $CellContext`y2 -> \
+$CellContext`y1 - $CellContext`ry2$$}], {$CellContext`x1, -10, 
+         10}, {$CellContext`y1, -10, 10}, StreamScale -> $CellContext`ss$$, 
+        PlotLegends -> BarLegend[{Hue, {0, 1}}], ImageSize -> 500, Epilog -> {
+          PointSize[0.01], 
+          Which[$CellContext`q1$$ == -1, 
+           Style[
+            Point[{0, 0}], Red], $CellContext`q1$$ == 1, 
+           Style[
+            Point[{0, 0}], Green], $CellContext`q1$$ == 0, 
+           Style[
+            Point[{0, 0}], Transparent]], 
+          If[
+           Or[$CellContext`q1$$ == 1, $CellContext`q1$$ == -1], 
+           Text[
+            Style["q1", Medium], {0, -0.5}]], 
+          Which[$CellContext`q2$$ == -1, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], 
+            Red], $CellContext`q2$$ == 1, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], 
+            Green], $CellContext`q2$$ == 0, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], Transparent]], 
+          If[
+           Or[$CellContext`q2$$ == 1, $CellContext`q2$$ == -1], 
+           Text[
+            Style[
+            "q2", Medium], {$CellContext`rx2$$, $CellContext`ry2$$ - 0.5}]]}],
+       "Specifications" :> {{{$CellContext`rx2$$, 1, "Charge 2 x position"}, 
+         0, 5}, {{$CellContext`ry2$$, 0, "Charge 2 y position"}, 0, 
+         5}, {{$CellContext`q1$$, 1, "Charge 1"}, {-1, 0, 
+         1}}, {{$CellContext`q2$$, -1, "Charge 2"}, {-1, 0, 
+         1}}, {{$CellContext`ss$$, 0.025, "Stream Arrow Fineness"}, {0.01, 
+         0.025, 0.05, 0.1, 0.5}}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{552., {316., 322.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.731254189474812*^9, 3.7312542547234573`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"StreamPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "x1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "x2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "x3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "x4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}]}], ")"}], "^", "1.5"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "y1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "y2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "y3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}]}], ")"}], "^", "1.5"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "y4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}]}], ")"}], "^", "1.5"}]}]}]}], "}"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x2", "\[Rule]", 
+         RowBox[{"x1", "-", "rx2"}]}], ",", 
+        RowBox[{"y2", "\[Rule]", 
+         RowBox[{"y1", "-", "ry2"}]}], ",", 
+        RowBox[{"x3", "\[Rule]", 
+         RowBox[{"x1", "-", "rx3"}]}], ",", 
+        RowBox[{"y3", "\[Rule]", 
+         RowBox[{"y1", "-", "ry3"}]}], ",", 
+        RowBox[{"x4", "\[Rule]", 
+         RowBox[{"x1", "-", "rx4"}]}], ",", 
+        RowBox[{"y4", "\[Rule]", 
+         RowBox[{"y1", "-", "ry4"}]}]}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"VectorPoints", "\[Rule]", "20"}], ",", 
+     RowBox[{"RegionFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y", ",", "vx", ",", "vy", ",", "n"}], "}"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "^", "2"}], "+", 
+          RowBox[{"y", "^", "2"}]}], ">", "1"}]}], "]"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"PointSize", "[", "0.01", "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q1", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Red"}], "]"}], ",", 
+          RowBox[{"q1", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Green"}], "]"}], 
+          ",", 
+          RowBox[{"q1", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", "Transparent"}], 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q1", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q1", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q1\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"-", "0.5"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q2", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Red"}], "]"}], 
+          ",", 
+          RowBox[{"q2", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Green"}], 
+           "]"}], ",", 
+          RowBox[{"q2", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx2", ",", "ry2"}], "}"}], "]"}], ",", "Transparent"}],
+            "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q2", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q2", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q2\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"rx2", ",", 
+              RowBox[{"ry2", "-", "0.5"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q3", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx3", ",", "ry3"}], "}"}], "]"}], ",", "Red"}], "]"}], 
+          ",", 
+          RowBox[{"q3", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx3", ",", "ry3"}], "}"}], "]"}], ",", "Green"}], 
+           "]"}], ",", 
+          RowBox[{"q3", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx3", ",", "ry3"}], "}"}], "]"}], ",", "Transparent"}],
+            "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q3", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q3", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q3\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"rx3", ",", 
+              RowBox[{"ry3", "+", "0.5"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"q4", "==", 
+           RowBox[{"-", "1"}]}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx4", ",", "ry4"}], "}"}], "]"}], ",", "Red"}], "]"}], 
+          ",", 
+          RowBox[{"q4", "\[Equal]", "1"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx4", ",", "ry4"}], "}"}], "]"}], ",", "Green"}], 
+           "]"}], ",", 
+          RowBox[{"q4", "\[Equal]", "0"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"rx4", ",", "ry4"}], "}"}], "]"}], ",", "Transparent"}],
+            "]"}]}], "]"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"q4", "\[Equal]", "1"}], "\[Or]", 
+           RowBox[{"q4", "\[Equal]", 
+            RowBox[{"-", "1"}]}]}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<q4\>\"", ",", "Medium"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"rx4", ",", 
+              RowBox[{"ry4", "+", "0.5"}]}], "}"}]}], "]"}]}], "]"}]}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx2", ",", "1", ",", "\"\<Charge 2 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry2", ",", "0", ",", "\"\<Charge 2 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx3", ",", "1", ",", "\"\<Charge 3 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry3", ",", "1", ",", "\"\<Charge 3 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx4", ",", "0", ",", "\"\<Charge 4 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry4", ",", "1", ",", "\"\<Charge 4 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q1", ",", "1", ",", "\"\<Charge 1\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q2", ",", "0", ",", "\"\<Charge 2\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q3", ",", "0", ",", "\"\<Charge 3\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q4", ",", "0", ",", "\"\<Charge 4\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwd0F1IU3EABfB1jSKaiWhCEMgNjKWD6FMzKYfLxIceZnGdRcnIxW6NIqkt
+o5jphhCZWJn2oYtNKGVys/Jj4sIa7lojQzfBHmaKlVexJuHKJZf+5/9w+D2d
+h3NYw0VdBaNQKNQksKHsUD4XXNAYvNpjcPYlu1NPbPuUSZ2PTZyDBj6Nh43v
+VvLLiNmOFA0cCOj18IaUVQ27Yqt2OHbn7mPozb7khPLPwmfQX7e1G1o8Sa9g
+JJTig6ofWW9hrr/9PZSim/wwZzPbaiFab96n7giJbhjunmmHSiP/Bpa67FSf
+PNUPrx7d6IXFy+NRK1GTYf4DC6wO5y3irgHnC5iTfEaA9g6Jmsjk9cB4wmIf
+HBPqB2FT0voANC4vRKDWpJuDB4eEReg7GfsNRX5pBdqGrzE1xHI2dQO0xjkl
+fN3bnAxbM1bTYHjLh0xY+E1UQ8Wpvbvh3AV2D+QqR3PhWU95Hvx62HUchmSR
+g2tH0nk4XLLODL8neiphj0W4Ard/jF+nvVJjLfx1YKIOpt6TqU8KJhvg55Jt
+jdCmijRB/vToQ3hbOf0UdjKGNlh0QuWCxft0z+H+/hqBGnBP051/q2V4fqSK
+qSWa7VyohehMXxOGVS29k/Cy0fsFiqbgFLQN9kmweTwahdKDin9Qqw4mPCLW
+O+apfnfkyBB+XTIVwf8x5ZUo
+  "],ExpressionUUID->"45e93aee-3eff-41f7-88f5-ae54f0c05534"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`q1$$ = 
+    1, $CellContext`q2$$ = -1, $CellContext`q3$$ = 0, $CellContext`q4$$ = 
+    0, $CellContext`rx2$$ = 1, $CellContext`rx3$$ = 1, $CellContext`rx4$$ = 
+    0, $CellContext`ry2$$ = 0, $CellContext`ry3$$ = 1, $CellContext`ry4$$ = 1,
+     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rx2$$], 1, "Charge 2 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry2$$], 0, "Charge 2 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rx3$$], 1, "Charge 3 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry3$$], 1, "Charge 3 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rx4$$], 0, "Charge 4 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry4$$], 1, "Charge 4 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`q1$$], 1, "Charge 1"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q2$$], 0, "Charge 2"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q3$$], 0, "Charge 3"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q4$$], 0, "Charge 4"}, {-1, 0, 1}}}, 
+    Typeset`size$$ = {450., {221., 226.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`rx2$10893$$ = 0, $CellContext`ry2$10894$$ = 
+    0, $CellContext`rx3$10895$$ = 0, $CellContext`ry3$10896$$ = 
+    0, $CellContext`rx4$10897$$ = 0, $CellContext`ry4$10898$$ = 
+    0, $CellContext`q1$10899$$ = 0, $CellContext`q2$10900$$ = 
+    0, $CellContext`q3$10901$$ = 0, $CellContext`q4$10902$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`q1$$ = 1, $CellContext`q2$$ = 
+        0, $CellContext`q3$$ = 0, $CellContext`q4$$ = 0, $CellContext`rx2$$ = 
+        1, $CellContext`rx3$$ = 1, $CellContext`rx4$$ = 0, $CellContext`ry2$$ = 
+        0, $CellContext`ry3$$ = 1, $CellContext`ry4$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rx2$$, $CellContext`rx2$10893$$, 0], 
+        Hold[$CellContext`ry2$$, $CellContext`ry2$10894$$, 0], 
+        Hold[$CellContext`rx3$$, $CellContext`rx3$10895$$, 0], 
+        Hold[$CellContext`ry3$$, $CellContext`ry3$10896$$, 0], 
+        Hold[$CellContext`rx4$$, $CellContext`rx4$10897$$, 0], 
+        Hold[$CellContext`ry4$$, $CellContext`ry4$10898$$, 0], 
+        Hold[$CellContext`q1$$, $CellContext`q1$10899$$, 0], 
+        Hold[$CellContext`q2$$, $CellContext`q2$10900$$, 0], 
+        Hold[$CellContext`q3$$, $CellContext`q3$10901$$, 0], 
+        Hold[$CellContext`q4$$, $CellContext`q4$10902$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> StreamPlot[
+        ReplaceAll[{($CellContext`q1$$ $CellContext`x1)/($CellContext`x1^2 + \
+$CellContext`y1^2)^1.5 + ($CellContext`q2$$ \
+$CellContext`x2)/($CellContext`x2^2 + $CellContext`y2^2)^1.5 + \
+($CellContext`q3$$ $CellContext`x3)/($CellContext`x3^2 + \
+$CellContext`y3^2)^1.5 + ($CellContext`q4$$ \
+$CellContext`x4)/($CellContext`x4^2 + $CellContext`y4^2)^1.5, \
+($CellContext`q1$$ $CellContext`y1)/($CellContext`x1^2 + \
+$CellContext`y1^2)^1.5 + ($CellContext`q2$$ \
+$CellContext`y2)/($CellContext`x2^2 + $CellContext`y2^2)^1.5 + \
+($CellContext`q3$$ $CellContext`y3)/($CellContext`x3^2 + \
+$CellContext`y3^2)^1.5 + ($CellContext`q4$$ \
+$CellContext`y4)/($CellContext`x4^2 + $CellContext`y4^2)^1.5}, \
+{$CellContext`x2 -> $CellContext`x1 - $CellContext`rx2$$, $CellContext`y2 -> \
+$CellContext`y1 - $CellContext`ry2$$, $CellContext`x3 -> $CellContext`x1 - \
+$CellContext`rx3$$, $CellContext`y3 -> $CellContext`y1 - $CellContext`ry3$$, \
+$CellContext`x4 -> $CellContext`x1 - $CellContext`rx4$$, $CellContext`y4 -> \
+$CellContext`y1 - $CellContext`ry4$$}], {$CellContext`x1, -10, 
+         10}, {$CellContext`y1, -10, 10}, VectorPoints -> 20, RegionFunction -> 
+        Function[{$CellContext`x, $CellContext`y, $CellContext`vx, \
+$CellContext`vy, $CellContext`n}, $CellContext`x^2 + $CellContext`y^2 > 1], 
+        ImageSize -> 500, Epilog -> {
+          PointSize[0.01], 
+          Which[$CellContext`q1$$ == -1, 
+           Style[
+            Point[{0, 0}], Red], $CellContext`q1$$ == 1, 
+           Style[
+            Point[{0, 0}], Green], $CellContext`q1$$ == 0, 
+           Style[
+            Point[{0, 0}], Transparent]], 
+          If[
+           Or[$CellContext`q1$$ == 1, $CellContext`q1$$ == -1], 
+           Text[
+            Style["q1", Medium], {0, -0.5}]], 
+          Which[$CellContext`q2$$ == -1, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], 
+            Red], $CellContext`q2$$ == 1, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], 
+            Green], $CellContext`q2$$ == 0, 
+           Style[
+            Point[{$CellContext`rx2$$, $CellContext`ry2$$}], Transparent]], 
+          If[
+           Or[$CellContext`q2$$ == 1, $CellContext`q2$$ == -1], 
+           Text[
+            Style[
+            "q2", Medium], {$CellContext`rx2$$, $CellContext`ry2$$ - 0.5}]], 
+          Which[$CellContext`q3$$ == -1, 
+           Style[
+            Point[{$CellContext`rx3$$, $CellContext`ry3$$}], 
+            Red], $CellContext`q3$$ == 1, 
+           Style[
+            Point[{$CellContext`rx3$$, $CellContext`ry3$$}], 
+            Green], $CellContext`q3$$ == 0, 
+           Style[
+            Point[{$CellContext`rx3$$, $CellContext`ry3$$}], Transparent]], 
+          If[
+           Or[$CellContext`q3$$ == 1, $CellContext`q3$$ == -1], 
+           Text[
+            Style[
+            "q3", Medium], {$CellContext`rx3$$, $CellContext`ry3$$ + 0.5}]], 
+          Which[$CellContext`q4$$ == -1, 
+           Style[
+            Point[{$CellContext`rx4$$, $CellContext`ry4$$}], 
+            Red], $CellContext`q4$$ == 1, 
+           Style[
+            Point[{$CellContext`rx4$$, $CellContext`ry4$$}], 
+            Green], $CellContext`q4$$ == 0, 
+           Style[
+            Point[{$CellContext`rx4$$, $CellContext`ry4$$}], Transparent]], 
+          If[
+           Or[$CellContext`q4$$ == 1, $CellContext`q4$$ == -1], 
+           Text[
+            Style[
+            "q4", Medium], {$CellContext`rx4$$, $CellContext`ry4$$ + 0.5}]]}],
+       "Specifications" :> {{{$CellContext`rx2$$, 1, "Charge 2 x position"}, 
+         0, 5, 1}, {{$CellContext`ry2$$, 0, "Charge 2 y position"}, 0, 5, 
+         1}, {{$CellContext`rx3$$, 1, "Charge 3 x position"}, 0, 5, 
+         1}, {{$CellContext`ry3$$, 1, "Charge 3 y position"}, 0, 5, 
+         1}, {{$CellContext`rx4$$, 0, "Charge 4 x position"}, 0, 5, 
+         1}, {{$CellContext`ry4$$, 1, "Charge 4 y position"}, 0, 5, 
+         1}, {{$CellContext`q1$$, 1, "Charge 1"}, {-1, 0, 
+         1}}, {{$CellContext`q2$$, 0, "Charge 2"}, {-1, 0, 
+         1}}, {{$CellContext`q3$$, 0, "Charge 3"}, {-1, 0, 
+         1}}, {{$CellContext`q4$$, 0, "Charge 4"}, {-1, 0, 1}}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{782., {249., 255.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.731103473485734*^9, 3.7311035035119486`*^9, 3.731103765920679*^9, 
+   3.7311484577396183`*^9, {3.731148597359466*^9, 3.7311486221531425`*^9}, {
+   3.7311486801525326`*^9, 3.731148772733*^9}, 3.7311488337894735`*^9, 
+   3.7312292732134204`*^9},
+ ExpressionUUID -> "9e315937-21dd-4db8-a3e0-b4ef15204597"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"VectorPlot3D", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "x1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}], "+", 
+             RowBox[{"z1", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "x2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}], "+", 
+             RowBox[{"z2", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "x3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}], "+", 
+             RowBox[{"z3", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "x4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}], "+", 
+             RowBox[{"z4", "^", "2"}]}], ")"}], "^", "p"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "y1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}], "+", 
+             RowBox[{"z1", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "y2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}], "+", 
+             RowBox[{"z2", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "y3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}], "+", 
+             RowBox[{"z3", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "y4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}], "+", 
+             RowBox[{"z4", "^", "2"}]}], ")"}], "^", "p"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "z1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}], "+", 
+             RowBox[{"z1", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "z2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}], "+", 
+             RowBox[{"z2", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "z3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}], "+", 
+             RowBox[{"z3", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "z4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}], "+", 
+             RowBox[{"z4", "^", "2"}]}], ")"}], "^", "p"}]}]}]}], "}"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x2", "\[Rule]", 
+         RowBox[{"x1", "-", "rx2"}]}], ",", 
+        RowBox[{"y2", "\[Rule]", 
+         RowBox[{"y1", "-", "ry2"}]}], ",", 
+        RowBox[{"x3", "\[Rule]", 
+         RowBox[{"x1", "-", "rx3"}]}], ",", 
+        RowBox[{"y3", "\[Rule]", 
+         RowBox[{"y1", "-", "ry3"}]}], ",", 
+        RowBox[{"x4", "\[Rule]", 
+         RowBox[{"x1", "-", "rx4"}]}], ",", 
+        RowBox[{"y4", "\[Rule]", 
+         RowBox[{"y1", "-", "ry4"}]}], ",", 
+        RowBox[{"z2", "\[Rule]", 
+         RowBox[{"z1", "-", "rz2"}]}], ",", 
+        RowBox[{"z3", "\[Rule]", 
+         RowBox[{"z1", "-", "rz3"}]}], ",", 
+        RowBox[{"z4", "\[Rule]", 
+         RowBox[{"z1", "-", "rz4"}]}], ",", 
+        RowBox[{"p", "\[Rule]", "1.5"}]}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"VectorColorFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{"Hue", "[", 
+        RowBox[{
+         RowBox[{"Log", "[", "#5", "]"}], "/", "5"}], "]"}], "]"}]}], ",", 
+     RowBox[{"RegionFunction", "\[Rule]", " ", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "x", ",", "y", ",", "z", ",", "vx", ",", "vy", ",", "vz", ",", "n"}],
+          "}"}], ",", 
+        RowBox[{"n", ">", "0.01"}]}], "]"}]}], ",", 
+     RowBox[{"VectorColorFunctionScaling", "\[Rule]", "True"}], ",", 
+     RowBox[{"VectorScale", "\[Rule]", "ss"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"BarLegend", "[", 
+       RowBox[{"{", 
+        RowBox[{"Hue", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}], "]"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+     RowBox[{"VectorPoints", "\[Rule]", "10"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx2", ",", "1", ",", "\"\<Charge 2 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry2", ",", "0", ",", "\"\<Charge 2 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rz2", ",", "0", ",", "\"\<Charge 2 z position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx3", ",", "1", ",", "\"\<Charge 3 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry3", ",", "1", ",", "\"\<Charge 3 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rz3", ",", "0", ",", "\"\<Charge 3 z position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx4", ",", "0", ",", "\"\<Charge 4 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry4", ",", "1", ",", "\"\<Charge 4 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rz4", ",", "0", ",", "\"\<Charge 4 z position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q1", ",", "1", ",", "\"\<Charge 1\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q2", ",", "0", ",", "\"\<Charge 2\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q3", ",", "0", ",", "\"\<Charge 3\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q4", ",", "0", ",", "\"\<Charge 4\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ss", ",", "0.01", ",", "\"\<Stream Arrow Fineness\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.01", ",", "0.025", ",", "0.05", ",", "0.1", ",", "0.5"}], 
+      "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7311048336369715`*^9, 3.731104982488717*^9}, {
+   3.7311050143564444`*^9, 3.7311050285982733`*^9}, {3.731105062512673*^9, 
+   3.7311052307580304`*^9}, 3.7311053069418616`*^9, {3.7311053681047025`*^9, 
+   3.731105517669668*^9}, {3.731105613336008*^9, 3.7311056963098445`*^9}, {
+   3.731105736034517*^9, 3.7311057721530685`*^9}, {3.731105812159191*^9, 
+   3.7311058786620607`*^9}, 3.731105930665923*^9, {3.7311060089382095`*^9, 
+   3.731106135260329*^9}, {3.7311061734070044`*^9, 3.7311061761353493`*^9}, {
+   3.7311062390933056`*^9, 3.7311062809371414`*^9}, {3.731106323945924*^9, 
+   3.7311063241524725`*^9}, {3.7311604482191215`*^9, 3.731160485398491*^9}, {
+   3.7311605367816925`*^9, 3.7311605835712132`*^9}, {3.731160703122308*^9, 
+   3.73116070742372*^9}, {3.7311609537132*^9, 3.7311609993406315`*^9}, 
+   3.731161054064334*^9, 
+   3.7312293906043463`*^9},ExpressionUUID->"571845a7-240f-46bd-a387-\
+4fffa6c6940d"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`q1$$ = 1, $CellContext`q2$$ = 
+    0, $CellContext`q3$$ = 0, $CellContext`q4$$ = 0, $CellContext`rx2$$ = 
+    1, $CellContext`rx3$$ = 1, $CellContext`rx4$$ = 0, $CellContext`ry2$$ = 
+    0, $CellContext`ry3$$ = 1, $CellContext`ry4$$ = 1, $CellContext`rz2$$ = 
+    0, $CellContext`rz3$$ = 0, $CellContext`rz4$$ = 0, $CellContext`ss$$ = 
+    0.05, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rx2$$], 1, "Charge 2 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry2$$], 0, "Charge 2 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rz2$$], 0, "Charge 2 z position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rx3$$], 1, "Charge 3 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry3$$], 1, "Charge 3 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rz3$$], 0, "Charge 3 z position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rx4$$], 0, "Charge 4 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry4$$], 1, "Charge 4 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rz4$$], 0, "Charge 4 z position"}, 0, 5, 1}, {{
+       Hold[$CellContext`q1$$], 1, "Charge 1"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q2$$], 0, "Charge 2"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q3$$], 0, "Charge 3"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q4$$], 0, "Charge 4"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`ss$$], 0.01, "Stream Arrow Fineness"}, {0.01, 0.025, 
+      0.05, 0.1, 0.5}}}, Typeset`size$$ = {505., {241., 246.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`rx2$20352$$ = 0, $CellContext`ry2$20353$$ = 
+    0, $CellContext`rz2$20354$$ = 0, $CellContext`rx3$20355$$ = 
+    0, $CellContext`ry3$20356$$ = 0, $CellContext`rz3$20357$$ = 
+    0, $CellContext`rx4$20358$$ = 0, $CellContext`ry4$20359$$ = 
+    0, $CellContext`rz4$20360$$ = 0, $CellContext`q1$20361$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`q1$$ = 1, $CellContext`q2$$ = 
+        0, $CellContext`q3$$ = 0, $CellContext`q4$$ = 0, $CellContext`rx2$$ = 
+        1, $CellContext`rx3$$ = 1, $CellContext`rx4$$ = 0, $CellContext`ry2$$ = 
+        0, $CellContext`ry3$$ = 1, $CellContext`ry4$$ = 1, $CellContext`rz2$$ = 
+        0, $CellContext`rz3$$ = 0, $CellContext`rz4$$ = 0, $CellContext`ss$$ = 
+        0.01}, "ControllerVariables" :> {
+        Hold[$CellContext`rx2$$, $CellContext`rx2$20352$$, 0], 
+        Hold[$CellContext`ry2$$, $CellContext`ry2$20353$$, 0], 
+        Hold[$CellContext`rz2$$, $CellContext`rz2$20354$$, 0], 
+        Hold[$CellContext`rx3$$, $CellContext`rx3$20355$$, 0], 
+        Hold[$CellContext`ry3$$, $CellContext`ry3$20356$$, 0], 
+        Hold[$CellContext`rz3$$, $CellContext`rz3$20357$$, 0], 
+        Hold[$CellContext`rx4$$, $CellContext`rx4$20358$$, 0], 
+        Hold[$CellContext`ry4$$, $CellContext`ry4$20359$$, 0], 
+        Hold[$CellContext`rz4$$, $CellContext`rz4$20360$$, 0], 
+        Hold[$CellContext`q1$$, $CellContext`q1$20361$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> VectorPlot3D[
+        ReplaceAll[{($CellContext`q1$$ $CellContext`x1)/($CellContext`x1^2 + \
+$CellContext`y1^2 + $CellContext`z1^2)^$CellContext`p + ($CellContext`q2$$ \
+$CellContext`x2)/($CellContext`x2^2 + $CellContext`y2^2 + \
+$CellContext`z2^2)^$CellContext`p + ($CellContext`q3$$ \
+$CellContext`x3)/($CellContext`x3^2 + $CellContext`y3^2 + \
+$CellContext`z3^2)^$CellContext`p + ($CellContext`q4$$ \
+$CellContext`x4)/($CellContext`x4^2 + $CellContext`y4^2 + \
+$CellContext`z4^2)^$CellContext`p, ($CellContext`q1$$ \
+$CellContext`y1)/($CellContext`x1^2 + $CellContext`y1^2 + \
+$CellContext`z1^2)^$CellContext`p + ($CellContext`q2$$ \
+$CellContext`y2)/($CellContext`x2^2 + $CellContext`y2^2 + \
+$CellContext`z2^2)^$CellContext`p + ($CellContext`q3$$ \
+$CellContext`y3)/($CellContext`x3^2 + $CellContext`y3^2 + \
+$CellContext`z3^2)^$CellContext`p + ($CellContext`q4$$ \
+$CellContext`y4)/($CellContext`x4^2 + $CellContext`y4^2 + \
+$CellContext`z4^2)^$CellContext`p, ($CellContext`q1$$ \
+$CellContext`z1)/($CellContext`x1^2 + $CellContext`y1^2 + \
+$CellContext`z1^2)^$CellContext`p + ($CellContext`q2$$ \
+$CellContext`z2)/($CellContext`x2^2 + $CellContext`y2^2 + \
+$CellContext`z2^2)^$CellContext`p + ($CellContext`q3$$ \
+$CellContext`z3)/($CellContext`x3^2 + $CellContext`y3^2 + \
+$CellContext`z3^2)^$CellContext`p + ($CellContext`q4$$ \
+$CellContext`z4)/($CellContext`x4^2 + $CellContext`y4^2 + \
+$CellContext`z4^2)^$CellContext`p}, {$CellContext`x2 -> $CellContext`x1 - \
+$CellContext`rx2$$, $CellContext`y2 -> $CellContext`y1 - $CellContext`ry2$$, \
+$CellContext`x3 -> $CellContext`x1 - $CellContext`rx3$$, $CellContext`y3 -> \
+$CellContext`y1 - $CellContext`ry3$$, $CellContext`x4 -> $CellContext`x1 - \
+$CellContext`rx4$$, $CellContext`y4 -> $CellContext`y1 - $CellContext`ry4$$, \
+$CellContext`z2 -> $CellContext`z1 - $CellContext`rz2$$, $CellContext`z3 -> \
+$CellContext`z1 - $CellContext`rz3$$, $CellContext`z4 -> $CellContext`z1 - \
+$CellContext`rz4$$, $CellContext`p -> 1.5}], {$CellContext`x1, -10, 
+         10}, {$CellContext`y1, -10, 10}, {$CellContext`z1, -10, 10}, 
+        VectorColorFunction -> (Hue[Log[#5]/5]& ), RegionFunction -> 
+        Function[{$CellContext`x, $CellContext`y, $CellContext`z, \
+$CellContext`vx, $CellContext`vy, $CellContext`vz, $CellContext`n}, \
+$CellContext`n > 0.01], VectorColorFunctionScaling -> True, 
+        VectorScale -> $CellContext`ss$$, PlotLegends -> 
+        BarLegend[{Hue, {0, 1}}], ImageSize -> 500, VectorPoints -> 10], 
+      "Specifications" :> {{{$CellContext`rx2$$, 1, "Charge 2 x position"}, 0,
+          5, 1}, {{$CellContext`ry2$$, 0, "Charge 2 y position"}, 0, 5, 
+         1}, {{$CellContext`rz2$$, 0, "Charge 2 z position"}, 0, 5, 
+         1}, {{$CellContext`rx3$$, 1, "Charge 3 x position"}, 0, 5, 
+         1}, {{$CellContext`ry3$$, 1, "Charge 3 y position"}, 0, 5, 
+         1}, {{$CellContext`rz3$$, 0, "Charge 3 z position"}, 0, 5, 
+         1}, {{$CellContext`rx4$$, 0, "Charge 4 x position"}, 0, 5, 
+         1}, {{$CellContext`ry4$$, 1, "Charge 4 y position"}, 0, 5, 
+         1}, {{$CellContext`rz4$$, 0, "Charge 4 z position"}, 0, 5, 
+         1}, {{$CellContext`q1$$, 1, "Charge 1"}, {-1, 0, 
+         1}}, {{$CellContext`q2$$, 0, "Charge 2"}, {-1, 0, 
+         1}}, {{$CellContext`q3$$, 0, "Charge 3"}, {-1, 0, 
+         1}}, {{$CellContext`q4$$, 0, "Charge 4"}, {-1, 0, 
+         1}}, {{$CellContext`ss$$, 0.01, "Stream Arrow Fineness"}, {0.01, 
+         0.025, 0.05, 0.1, 0.5}}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{850., {269., 275.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.731104857684064*^9, 3.7311049886761584`*^9, 3.7311050305294256`*^9, 
+   3.7311051226782064`*^9, 3.7311052321958246`*^9, 3.73110530937934*^9, 
+   3.7311058846537957`*^9, 3.731105931522156*^9, {3.7311060150692835`*^9, 
+   3.731106066712715*^9}, {3.731106101862314*^9, 3.7311061363231215`*^9}, 
+   3.731106178355878*^9, 3.731106249167248*^9, 3.7311062825093203`*^9, 
+   3.7311063259993443`*^9, 3.7311604619847775`*^9, {3.731160540206807*^9, 
+   3.7311605842610464`*^9}, {3.731160978021857*^9, 3.7311609997005515`*^9}, 
+   3.7311610547501183`*^9, 3.7312293915263133`*^9},
+ ExpressionUUID -> "24c79ad7-c812-4a8b-945e-cfefc3f4790c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"SliceVectorPlot3D", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "x1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}], "+", 
+             RowBox[{"z1", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "x2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}], "+", 
+             RowBox[{"z2", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "x3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}], "+", 
+             RowBox[{"z3", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "x4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}], "+", 
+             RowBox[{"z4", "^", "2"}]}], ")"}], "^", "p"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "y1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}], "+", 
+             RowBox[{"z1", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "y2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}], "+", 
+             RowBox[{"z2", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "y3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}], "+", 
+             RowBox[{"z3", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "y4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}], "+", 
+             RowBox[{"z4", "^", "2"}]}], ")"}], "^", "p"}]}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q1", " ", "z1"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x1", "^", "2"}], "+", 
+             RowBox[{"y1", "^", "2"}], "+", 
+             RowBox[{"z1", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q2", " ", "z2"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x2", "^", "2"}], "+", 
+             RowBox[{"y2", "^", "2"}], "+", 
+             RowBox[{"z2", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q3", " ", "z3"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x3", "^", "2"}], "+", 
+             RowBox[{"y3", "^", "2"}], "+", 
+             RowBox[{"z3", "^", "2"}]}], ")"}], "^", "p"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"q4", " ", "z4"}], ")"}], "/", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"x4", "^", "2"}], "+", 
+             RowBox[{"y4", "^", "2"}], "+", 
+             RowBox[{"z4", "^", "2"}]}], ")"}], "^", "p"}]}]}]}], "}"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x2", "\[Rule]", 
+         RowBox[{"x1", "-", "rx2"}]}], ",", 
+        RowBox[{"y2", "\[Rule]", 
+         RowBox[{"y1", "-", "ry2"}]}], ",", 
+        RowBox[{"x3", "\[Rule]", 
+         RowBox[{"x1", "-", "rx3"}]}], ",", 
+        RowBox[{"y3", "\[Rule]", 
+         RowBox[{"y1", "-", "ry3"}]}], ",", 
+        RowBox[{"x4", "\[Rule]", 
+         RowBox[{"x1", "-", "rx4"}]}], ",", 
+        RowBox[{"y4", "\[Rule]", 
+         RowBox[{"y1", "-", "ry4"}]}], ",", 
+        RowBox[{"z2", "\[Rule]", 
+         RowBox[{"z1", "-", "rz2"}]}], ",", 
+        RowBox[{"z3", "\[Rule]", 
+         RowBox[{"z1", "-", "rz3"}]}], ",", 
+        RowBox[{"z4", "\[Rule]", 
+         RowBox[{"z1", "-", "rz4"}]}], ",", 
+        RowBox[{"p", "\[Rule]", "1.5"}]}], "}"}]}], ",", 
+     "\"\<CenterPlanes\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z1", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"VectorPoints", "\[Rule]", "vp"}], ",", 
+     RowBox[{"VectorScale", "\[Rule]", "vs"}], ",", 
+     RowBox[{"VectorStyle", "\[Rule]", 
+      RowBox[{"Arrowheads", "[", "0", "]"}]}], ",", 
+     RowBox[{"VectorColorFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{"Hue", "[", 
+        RowBox[{
+         RowBox[{"Log", "[", "#5", "]"}], "/", "5"}], "]"}], "]"}]}], ",", 
+     RowBox[{"RegionFunction", "\[Rule]", " ", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "x", ",", "y", ",", "z", ",", "vx", ",", "vy", ",", "vz", ",", "n"}],
+          "}"}], ",", 
+        RowBox[{"n", ">", "0.001"}]}], "]"}]}], ",", 
+     RowBox[{"VectorColorFunctionScaling", "\[Rule]", "True"}], ",", 
+     RowBox[{"VectorScale", "\[Rule]", "ss"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"BarLegend", "[", 
+       RowBox[{"{", 
+        RowBox[{"Hue", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}], "]"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+     RowBox[{"VectorPoints", "\[Rule]", "10"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx2", ",", "5", ",", "\"\<Charge 2 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry2", ",", "0", ",", "\"\<Charge 2 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rz2", ",", "0", ",", "\"\<Charge 2 z position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx3", ",", "1", ",", "\"\<Charge 3 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry3", ",", "1", ",", "\"\<Charge 3 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rz3", ",", "0", ",", "\"\<Charge 3 z position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rx4", ",", "0", ",", "\"\<Charge 4 x position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ry4", ",", "1", ",", "\"\<Charge 4 y position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rz4", ",", "0", ",", "\"\<Charge 4 z position\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q1", ",", "1", ",", "\"\<Charge 1\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q2", ",", 
+       RowBox[{"-", "1"}], ",", "\"\<Charge 2\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q3", ",", "0", ",", "\"\<Charge 3\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"q4", ",", "0", ",", "\"\<Charge 4\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ss", ",", "0.01", ",", "\"\<Stream Arrow Fineness\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.01", ",", "0.025", ",", "0.05", ",", "0.1", ",", "0.5"}], 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"vs", ",", "0.1", ",", "\"\<Vector Scale\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.01", ",", "0.05", ",", "0.1", ",", "0.2", ",", "0.5"}], 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"vp", ",", "10", ",", "\"\<Vector Points\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "10", ",", "20", ",", "30"}], "}"}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.731161324218254*^9, 3.731161350234482*^9}, {
+   3.731161442657477*^9, 3.73116145378811*^9}, {3.7311616225090804`*^9, 
+   3.731161651102174*^9}, {3.7311616847356815`*^9, 3.7311616849191756`*^9}, {
+   3.7311617475899525`*^9, 3.731161840164353*^9}, {3.731161904960763*^9, 
+   3.731161905155278*^9}, {3.731161940048396*^9, 3.7311619945496054`*^9}, {
+   3.731162040379574*^9, 3.7311620422936316`*^9}, 3.731162105450745*^9, {
+   3.731162203668125*^9, 3.7311622230366364`*^9}, {3.7311622613826866`*^9, 
+   3.73116228093773*^9}, {3.731162331333889*^9, 3.7311623320056357`*^9}, 
+   3.7312293755994453`*^9},ExpressionUUID->"20e55481-6897-465f-9827-\
+38396caf2d25"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`q1$$ = 
+    1, $CellContext`q2$$ = -1, $CellContext`q3$$ = 0, $CellContext`q4$$ = 
+    0, $CellContext`rx2$$ = 5, $CellContext`rx3$$ = 1, $CellContext`rx4$$ = 
+    0, $CellContext`ry2$$ = 0, $CellContext`ry3$$ = 1, $CellContext`ry4$$ = 
+    1, $CellContext`rz2$$ = 0, $CellContext`rz3$$ = 0, $CellContext`rz4$$ = 
+    0, $CellContext`ss$$ = 0.01, $CellContext`vp$$ = 10, $CellContext`vs$$ = 
+    0.1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rx2$$], 5, "Charge 2 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry2$$], 0, "Charge 2 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rz2$$], 0, "Charge 2 z position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rx3$$], 1, "Charge 3 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry3$$], 1, "Charge 3 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rz3$$], 0, "Charge 3 z position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rx4$$], 0, "Charge 4 x position"}, 0, 5, 1}, {{
+       Hold[$CellContext`ry4$$], 1, "Charge 4 y position"}, 0, 5, 1}, {{
+       Hold[$CellContext`rz4$$], 0, "Charge 4 z position"}, 0, 5, 1}, {{
+       Hold[$CellContext`q1$$], 1, "Charge 1"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q2$$], -1, "Charge 2"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q3$$], 0, "Charge 3"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`q4$$], 0, "Charge 4"}, {-1, 0, 1}}, {{
+       Hold[$CellContext`ss$$], 0.01, "Stream Arrow Fineness"}, {0.01, 0.025, 
+      0.05, 0.1, 0.5}}, {{
+       Hold[$CellContext`vs$$], 0.1, "Vector Scale"}, {0.01, 0.05, 0.1, 0.2, 
+      0.5}}, {{
+       Hold[$CellContext`vp$$], 10, "Vector Points"}, {1, 10, 20, 30}}}, 
+    Typeset`size$$ = {505., {246., 252.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`rx2$19672$$ = 0, $CellContext`ry2$19673$$ = 
+    0, $CellContext`rz2$19674$$ = 0, $CellContext`rx3$19675$$ = 
+    0, $CellContext`ry3$19676$$ = 0, $CellContext`rz3$19677$$ = 
+    0, $CellContext`rx4$19678$$ = 0, $CellContext`ry4$19679$$ = 
+    0, $CellContext`rz4$19680$$ = 0, $CellContext`q1$19681$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`q1$$ = 
+        1, $CellContext`q2$$ = -1, $CellContext`q3$$ = 0, $CellContext`q4$$ = 
+        0, $CellContext`rx2$$ = 5, $CellContext`rx3$$ = 1, $CellContext`rx4$$ = 
+        0, $CellContext`ry2$$ = 0, $CellContext`ry3$$ = 1, $CellContext`ry4$$ = 
+        1, $CellContext`rz2$$ = 0, $CellContext`rz3$$ = 0, $CellContext`rz4$$ = 
+        0, $CellContext`ss$$ = 0.01, $CellContext`vp$$ = 
+        10, $CellContext`vs$$ = 0.1}, "ControllerVariables" :> {
+        Hold[$CellContext`rx2$$, $CellContext`rx2$19672$$, 0], 
+        Hold[$CellContext`ry2$$, $CellContext`ry2$19673$$, 0], 
+        Hold[$CellContext`rz2$$, $CellContext`rz2$19674$$, 0], 
+        Hold[$CellContext`rx3$$, $CellContext`rx3$19675$$, 0], 
+        Hold[$CellContext`ry3$$, $CellContext`ry3$19676$$, 0], 
+        Hold[$CellContext`rz3$$, $CellContext`rz3$19677$$, 0], 
+        Hold[$CellContext`rx4$$, $CellContext`rx4$19678$$, 0], 
+        Hold[$CellContext`ry4$$, $CellContext`ry4$19679$$, 0], 
+        Hold[$CellContext`rz4$$, $CellContext`rz4$19680$$, 0], 
+        Hold[$CellContext`q1$$, $CellContext`q1$19681$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> SliceVectorPlot3D[
+        ReplaceAll[{($CellContext`q1$$ $CellContext`x1)/($CellContext`x1^2 + \
+$CellContext`y1^2 + $CellContext`z1^2)^$CellContext`p + ($CellContext`q2$$ \
+$CellContext`x2)/($CellContext`x2^2 + $CellContext`y2^2 + \
+$CellContext`z2^2)^$CellContext`p + ($CellContext`q3$$ \
+$CellContext`x3)/($CellContext`x3^2 + $CellContext`y3^2 + \
+$CellContext`z3^2)^$CellContext`p + ($CellContext`q4$$ \
+$CellContext`x4)/($CellContext`x4^2 + $CellContext`y4^2 + \
+$CellContext`z4^2)^$CellContext`p, ($CellContext`q1$$ \
+$CellContext`y1)/($CellContext`x1^2 + $CellContext`y1^2 + \
+$CellContext`z1^2)^$CellContext`p + ($CellContext`q2$$ \
+$CellContext`y2)/($CellContext`x2^2 + $CellContext`y2^2 + \
+$CellContext`z2^2)^$CellContext`p + ($CellContext`q3$$ \
+$CellContext`y3)/($CellContext`x3^2 + $CellContext`y3^2 + \
+$CellContext`z3^2)^$CellContext`p + ($CellContext`q4$$ \
+$CellContext`y4)/($CellContext`x4^2 + $CellContext`y4^2 + \
+$CellContext`z4^2)^$CellContext`p, ($CellContext`q1$$ \
+$CellContext`z1)/($CellContext`x1^2 + $CellContext`y1^2 + \
+$CellContext`z1^2)^$CellContext`p + ($CellContext`q2$$ \
+$CellContext`z2)/($CellContext`x2^2 + $CellContext`y2^2 + \
+$CellContext`z2^2)^$CellContext`p + ($CellContext`q3$$ \
+$CellContext`z3)/($CellContext`x3^2 + $CellContext`y3^2 + \
+$CellContext`z3^2)^$CellContext`p + ($CellContext`q4$$ \
+$CellContext`z4)/($CellContext`x4^2 + $CellContext`y4^2 + \
+$CellContext`z4^2)^$CellContext`p}, {$CellContext`x2 -> $CellContext`x1 - \
+$CellContext`rx2$$, $CellContext`y2 -> $CellContext`y1 - $CellContext`ry2$$, \
+$CellContext`x3 -> $CellContext`x1 - $CellContext`rx3$$, $CellContext`y3 -> \
+$CellContext`y1 - $CellContext`ry3$$, $CellContext`x4 -> $CellContext`x1 - \
+$CellContext`rx4$$, $CellContext`y4 -> $CellContext`y1 - $CellContext`ry4$$, \
+$CellContext`z2 -> $CellContext`z1 - $CellContext`rz2$$, $CellContext`z3 -> \
+$CellContext`z1 - $CellContext`rz3$$, $CellContext`z4 -> $CellContext`z1 - \
+$CellContext`rz4$$, $CellContext`p -> 1.5}], 
+        "CenterPlanes", {$CellContext`x1, -10, 10}, {$CellContext`y1, -10, 
+         10}, {$CellContext`z1, -10, 10}, VectorPoints -> $CellContext`vp$$, 
+        VectorScale -> $CellContext`vs$$, VectorStyle -> Arrowheads[0], 
+        VectorColorFunction -> (Hue[Log[#5]/5]& ), RegionFunction -> 
+        Function[{$CellContext`x, $CellContext`y, $CellContext`z, \
+$CellContext`vx, $CellContext`vy, $CellContext`vz, $CellContext`n}, \
+$CellContext`n > 0.001], VectorColorFunctionScaling -> True, 
+        VectorScale -> $CellContext`ss$$, PlotLegends -> 
+        BarLegend[{Hue, {0, 1}}], ImageSize -> 500, VectorPoints -> 10], 
+      "Specifications" :> {{{$CellContext`rx2$$, 5, "Charge 2 x position"}, 0,
+          5, 1}, {{$CellContext`ry2$$, 0, "Charge 2 y position"}, 0, 5, 
+         1}, {{$CellContext`rz2$$, 0, "Charge 2 z position"}, 0, 5, 
+         1}, {{$CellContext`rx3$$, 1, "Charge 3 x position"}, 0, 5, 
+         1}, {{$CellContext`ry3$$, 1, "Charge 3 y position"}, 0, 5, 
+         1}, {{$CellContext`rz3$$, 0, "Charge 3 z position"}, 0, 5, 
+         1}, {{$CellContext`rx4$$, 0, "Charge 4 x position"}, 0, 5, 
+         1}, {{$CellContext`ry4$$, 1, "Charge 4 y position"}, 0, 5, 
+         1}, {{$CellContext`rz4$$, 0, "Charge 4 z position"}, 0, 5, 
+         1}, {{$CellContext`q1$$, 1, "Charge 1"}, {-1, 0, 
+         1}}, {{$CellContext`q2$$, -1, "Charge 2"}, {-1, 0, 
+         1}}, {{$CellContext`q3$$, 0, "Charge 3"}, {-1, 0, 
+         1}}, {{$CellContext`q4$$, 0, "Charge 4"}, {-1, 0, 
+         1}}, {{$CellContext`ss$$, 0.01, "Stream Arrow Fineness"}, {0.01, 
+         0.025, 0.05, 0.1, 0.5}}, {{$CellContext`vs$$, 0.1, "Vector Scale"}, {
+         0.01, 0.05, 0.1, 0.2, 
+         0.5}}, {{$CellContext`vp$$, 10, "Vector Points"}, {1, 10, 20, 30}}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{850., {275., 281.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7311613516201954`*^9, 3.731161454291438*^9, {3.731161637127019*^9, 
+   3.7311616522893667`*^9}, 3.7311616858546968`*^9, {3.731161749427846*^9, 
+   3.731161790539254*^9}, 3.7311618413104086`*^9, 3.7311619107952895`*^9, 
+   3.7311619949696875`*^9, 3.7311620477060356`*^9, 3.7311621129917927`*^9, {
+   3.7311622055762024`*^9, 3.731162223677343*^9}, {3.7311622635545053`*^9, 
+   3.7311622818090477`*^9}, {3.731162339250949*^9, 3.731162340070095*^9}, 
+   3.7312293817719784`*^9},
+ ExpressionUUID -> "765f45e8-c0c3-4827-a52e-08c11a3390ba"]
+}, Open  ]]
+},
+WindowSize->{1364, 676},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 11595, 328, 262, "Input"],
+Cell[12178, 352, 7971, 150, 533, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20186, 507, 6246, 177, 118, "Input"],
+Cell[26435, 686, 4491, 87, 653, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30963, 778, 11841, 329, 262, "Input"],
+Cell[42807, 1109, 7942, 151, 519, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50786, 1265, 9750, 266, 208, "Input"],
+Cell[60539, 1533, 8077, 128, 559, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68653, 1666, 10220, 282, 226, "Input"],
+Cell[78876, 1950, 8574, 138, 571, "Output"]
+}, Open  ]]
+}
+]
+*)
+
